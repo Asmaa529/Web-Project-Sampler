@@ -61,6 +61,8 @@ export default class SamplerGUI{
 
             if(this.trimbarsDrawer) {
                 this.trimbarsDrawer.moveTrimBars(mousePosition);
+                this.trimbarsDrawer.clear();
+                this.trimbarsDrawer.draw();
             }
         }
 
@@ -73,6 +75,9 @@ export default class SamplerGUI{
         this.overlayCanvas.onmouseup = (e) => {
             if(this.trimbarsDrawer) {
                 this.trimbarsDrawer.stopDrag();
+
+                this.trimbarsDrawer.clear();
+                this.trimbarsDrawer.draw();
 
                 let start = pixelToSeconds(this.trimbarsDrawer.leftTrimBar.x, this.activeSound.audioBuffer.duration, this.waveformCanvas.width);
                 let end = pixelToSeconds(this.trimbarsDrawer.rightTrimBar.x, this.activeSound.audioBuffer.duration, this.waveformCanvas.width);
