@@ -39,14 +39,14 @@ Sampler/
 │   ├── css/
 │   │   └── styles.css   <-- All application styles
 │   ├── js/            <-- All client-side JavaScript modules client
-│   │   ├── main.js
-│   │   ├── samplerengine.js
-│   │   ├── samplergui.js
-│   │   ├── sound.js
-│   │   ├── soundutils.js
-│   │   ├── trimbarsdrawer.js
-│   │   ├── utils.js
-│   │   └── waveformdrawer.js
+│   │   ├── main.js             <-- Main script (initialization, event listeners)
+│   │   ├── samplerengine.js    <-- Core logic for loading/managing sounds
+│   │   ├── samplergui.js       <-- Handles all UI/DOM manipulation
+│   │   ├── sound.js            <-- Class representing a single sound
+│   │   ├── soundutils.js       <-- Helper functions for Web Audio API
+│   │   ├── trimbarsdrawer.js   <-- Class for drawing interactive trim bars
+│   │   ├── utils.js            <-- General utility functions
+│   │   └── waveformdrawer.js   <-- Class for drawing the audio waveform
 │   └── presets/       <-- Folder containing audio samples
 │
 ├── src/             <-- Folder containing server-side source code
@@ -67,7 +67,7 @@ Before you begin, ensure you have the following installed on your machine:
 1.  Clone the repository to your local machine:
     ```bash
     git clone [https://github.com/Asmaa529/Web-Project-Sampler.git](https://github.com/Asmaa529/Web-Project-Sampler.git)
-    cd Web-Project-Sampler\Sampler
+    cd Web-Project-Sampler/Sampler
     ```
 
 2.  Install the server dependencies:
@@ -83,6 +83,9 @@ Before you begin, ensure you have the following installed on your machine:
 4.  Open the application in your browser by navigating to:
     **`http://localhost:3001`**
     The server should now be running and serving the application on this port.
+
+    Or, if you're using Visual Studio Code:
+    right-click on the `index.html` file and select `Open with Live Server`
 
 ## Authors
 
