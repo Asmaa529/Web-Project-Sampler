@@ -1,0 +1,23 @@
+{
+  "name": "tp1-presets-api",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "API REST (Node/Express) presets sampler squelette",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "node --watch index.mjs",
+    "test": "vitest run --reporter=dot"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0",
+    "vitest": "^1.6.0"
+  }
+}
