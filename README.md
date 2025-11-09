@@ -50,9 +50,9 @@ Sampler/
 │   └── presets/       <-- Folder containing audio samples
 │
 ├── src/             <-- Folder containing server-side source code
-│   └── app.mjs      <-- Main server file
-│
-└── tests/           <-- Folder for project tests
+    └── app.mjs      <-- Main server file
+
+
 ```
 
 ## Getting Started
