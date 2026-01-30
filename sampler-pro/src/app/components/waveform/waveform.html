@@ -1,0 +1,40 @@
+@if(activeSound){
+<div id="slider">
+  <!-- Loop -->
+  <div class="slider-loop-control">
+    <mat-checkbox class="slider-checkbox" 
+                  [(ngModel)]="activeSound.loop" 
+                  (change)="toggleLoop()">
+      Loop
+    </mat-checkbox>
+  </div>
+
+  <!-- Speed / Pitch -->
+  <div id="slider-pitch" class="slider-group">
+    <label class="slider-label">Speed / Pitch</label>
+    <mat-slider min="0.5" max="2.0" step="0.01">
+      <input matSliderThumb [(ngModel)]="activeSound.playbackSpeed" (ngModelChange)="onPlaybackSpeedChange($event)">
+    </mat-slider>
+  </div>
+
+  <!-- Volume -->
+  <div id="slider-volume" class="slider-group">
+    <label class="slider-label slider-label-volume">Volume</label>
+    <mat-slider min="0" max="1" step="0.01"> 
+      <input matSliderThumb [(ngModel)]="activeSound.volume"> 
+    </mat-slider> 
+  </div>
+</div>
+
+<!-- Waveform canvas container -->
+<div id="div-canvas">
+  <!-- waveform canvas (background drawing) -->
+  <canvas id="waveform-canvas" #waveformCanvas width="400" height="100"></canvas>
+
+  <!-- overlay canvas (trim bars & playhead; handle mouse events on overlay) -->
+  <canvas id="overlay-canvas" #overlayCanvas width="400" height="100"
+          (mousedown)="onMouseDown()"
+          (mousemove)="onMouseMove($event)"
+          (mouseup)="onMouseUp()"></canvas>
+</div>
+}

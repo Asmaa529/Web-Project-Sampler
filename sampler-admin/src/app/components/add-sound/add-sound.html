@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Add new presets</h2>
+    <form (submit)="onAdd()" #addForm="ngForm" class="form">
+        <mat-form-field appearance="fill">
+            <mat-label>Name of the preset</mat-label>
+            <input matInput [(ngModel)]="newSound.name" name="name" required placeholder="Ex: My Kick 23">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Category</mat-label>
+            <input matInput [(ngModel)]="newSound.category" name="category" required>
+        </mat-form-field>
+
+        <div class="file-upload">
+            <label for="audio-file" class="file-label">
+                @if (selectedFiles.length > 0) {
+                    {{ selectedFiles.length }} file(s) selected
+                } @else {
+                    Choose audio files (.mp3, .wav…)
+                }
+            </label>
+            <input type="file" id="audio-file" (change)="onFileSelected($event)" accept="audio/*" multiple hidden #fileInput>
+            <button type="button" mat-raised-button (click)="fileInput.click()">
+                Browse...
+            </button>
+        </div>
+
+        <div class="actions">
+            <button mat-raised-button color="primary" type="submit" 
+                    [disabled]="isSubmitDisabled()">
+                Create presets
+            </button>
+            <button mat-button type="button" routerLink="/preset-list">Cancel</button>
+        </div>
+    </form>
+</div>

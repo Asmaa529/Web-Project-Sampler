@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Managing the sounds of a preset</h2>
+
+  <div class="form-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Choose a preset</mat-label>
+      <mat-select (selectionChange)="onPresetSelected($event.value)">
+        @for(preset of presets; track preset.name){
+          <mat-option [value]="preset">{{ preset.name }}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+
+    @if(selectedPreset){
+      <div class="sounds-section">
+        <h3>Sons dans "{{ selectedPreset.name }}"</h3>
+        <div class="sounds-grid">
+          @for(sound of selectedPreset.samples; track sound.id){
+            <div class="sound-item" 
+                 [class.selected]="isSoundSelected(sound)"
+                 (click)="onToggleSoundSelection(sound)">
+              <span class="sound-name">{{sound.name}}</span>
+              <span class="sound-cat">{{sound.category}}</span>
+            </div>
+          }
+        </div>
+
+        <div class="actions">
+          <button mat-raised-button color="warn" 
+                  (click)="onDeleteSelectedSounds()"
+                  [disabled]="selectedSounds.length === 0">
+            Delete selection ({{ selectedSounds.length }})
+          </button>
+        </div>
+      </div>
+    }
+
+    <button mat-button routerLink="/preset-list">Return</button>
+  </div>
+</div>

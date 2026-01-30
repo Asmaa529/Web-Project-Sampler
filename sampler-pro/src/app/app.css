@@ -1,0 +1,43 @@
+.main-nav {
+  margin: 20px auto;
+  width: fit-content;
+  padding: 10px 30px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a.active-link {
+  color: #fff;
+  background: rgba(63, 81, 181, 0.5);
+  box-shadow: 0 0 15px rgba(63, 81, 181, 0.3);
+}
+
+main {
+  padding-top: 10px;
+}

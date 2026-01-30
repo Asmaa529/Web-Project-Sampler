@@ -1,0 +1,92 @@
+.admin-container {
+    max-width: 850px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.preset-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.preset-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(0, 212, 255, 0.4);
+    transform: translateX(5px);
+}
+
+.preset-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.rename-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+button:first-of-type {
+    background: rgba(63, 81, 181, 0.6);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+button:first-of-type:hover {
+    background: rgba(63, 81, 181, 0.9);
+    box-shadow: 0 0 15px rgba(63, 81, 181, 0.5);
+}
+
+.btn-delete {
+    background: rgba(244, 67, 54, 0.2);
+    color: #ff5252;
+    border: 1px solid rgba(244, 67, 54, 0.4);
+}
+
+.btn-delete:hover {
+    background: rgba(244, 67, 54, 0.6);
+    color: white;
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.4);
+}

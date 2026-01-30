@@ -1,0 +1,17 @@
+{
+  "name": "test",
+  "category": "User import",
+  "samples": [
+    {
+      "id": 1769786898450,
+      "name": "test_enregistrement_1.mp3",
+      "category": "User import",
+      "url": "./1769786898440-test_enregistrement_1.mp3",
+      "startTime": 0,
+      "endTime": 1,
+      "playbackSpeed": 1,
+      "volume": 1,
+      "loop": false
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "",
+  "category": "User import",
+  "sounds": [
+    {
+      "id": 1769774939173,
+      "name": "jnej",
+      "category": "User import",
+      "url": "./1769774939130-NEJ - Indomptable (Audio officiel).mp3",
+      "startTime": 0,
+      "endTime": 1,
+      "playbackSpeed": 1,
+      "volume": 1,
+      "loop": false
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+<div id="controls">
+
+  <!-- Sélection du preset -->
+  <mat-form-field>
+    <mat-label>Choose a preset</mat-label>
+
+    <mat-select
+      (selectionChange)="onPresetSelected($event.value)"
+    >
+      @for (preset of presets; track preset.name) {
+        <mat-option [value]="preset.name">
+          {{ preset.name }}
+        </mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="runHeadlessTest()"
+  >
+    Test automatique (Headless)
+  </button>
+
+  <!-- Enregistrement micro -->
+  <div class="record-controls">
+
+    <button
+      mat-raised-button
+      color="warn"
+      *ngIf="!isRecording"
+      (click)="startRecording()"
+    >
+      Record
+    </button>
+
+    <button
+      mat-raised-button
+      color="accent"
+      *ngIf="isRecording"
+      (click)="stopRecording()"
+    >
+      Stop
+    </button>
+
+  </div>
+
+  @if (selectedSound) {
+    <app-waveform
+      [activeSound]="selectedSound"
+      [lastPlayTime]="lastPlayTime"
+    >
+    </app-waveform>
+  }
+
+  <!-- Pads -->
+  <div id="div-btn">
+    @for (sound of sounds; track sound.id) {
+      <app-pad
+        [sound]="sound"
+        (selected)="handleSoundPlay($event)"
+      >
+      </app-pad>
+    }
+  </div>
+
+  <span
+    *ngIf="isRecording"
+    class="recording-indicator"
+  >
+    Recording...
+  </span>
+
+</div>

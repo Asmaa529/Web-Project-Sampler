@@ -1,0 +1,17 @@
+{
+  "name": "test 2",
+  "category": "User import",
+  "samples": [
+    {
+      "id": 1769775497974,
+      "name": "nej",
+      "category": "User import",
+      "url": "./1769775497936-NEJ - Indomptable (Audio officiel).mp3",
+      "startTime": 0,
+      "endTime": 1,
+      "playbackSpeed": 1,
+      "volume": 1,
+      "loop": false
+    }
+  ]
+}

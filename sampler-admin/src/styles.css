@@ -1,0 +1,40 @@
+:root {
+    --bg-color: #1a1a1a;
+    --primary-color: #2c2c2c;
+    --secondary-color: #444;
+    --accent-color: #4682B4;
+    --highlight-color: #4682B4;
+    --text-color: #e0e0e0;
+    --font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://w.wallhaven.cc/full/7j/wallhaven-7jgyre.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

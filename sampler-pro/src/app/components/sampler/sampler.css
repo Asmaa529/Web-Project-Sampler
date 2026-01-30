@@ -1,0 +1,91 @@
+#controls {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center;
+  gap: 25px;
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 600px;
+}
+
+.record-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px; 
+  width: 100%;
+}
+
+.record-controls button, 
+button[mat-raised-button] {
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  padding: 10px 25px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+button[mat-raised-button]:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.record-controls button[color="warn"] {
+  border-color: rgba(244, 67, 54, 0.5) !important;
+  color: #ff8a80 !important;
+}
+
+.recording-indicator {
+  color: #ff5252 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  animation: pulse-glass 1.5s infinite;
+  margin-top: 10px;
+}
+
+@keyframes pulse-glass {
+  0% { opacity: 1; text-shadow: 0 0 5px rgba(244, 67, 54, 0.8); }
+  50% { opacity: 0.5; text-shadow: 0 0 20px rgba(244, 67, 54, 0.2); }
+  100% { opacity: 1; text-shadow: 0 0 5px rgba(244, 67, 54, 0.8); }
+}
+
+mat-form-field {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 5px 15px 0 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 300px;
+}
+
+#div-btn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 15px;
+  justify-items: center;
+  width: fit-content;       
+  margin: 20px auto;
+}
+
+#wrapper {
+  padding: 40px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

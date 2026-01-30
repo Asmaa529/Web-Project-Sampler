@@ -1,0 +1,7 @@
+<button mat-stroked-button 
+        type="button"
+        class="sampler-pad" 
+        (click)="onPlay()" 
+        [class.playing]="sound.isPlaying">
+  {{ sound.name }}
+</button>

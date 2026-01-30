@@ -1,0 +1,12 @@
+<div class="admin-container">
+  @for(preset of presets; track preset.name){
+    <div class="preset-card">
+        <span class="preset-name">{{preset.name}}</span>
+        <div class="rename-box">
+            <input #newNameInput type="text" placeholder="New name">
+            <button (click)="onRename(preset, newNameInput.value)">Rename</button>
+            <button class="btn-delete" (click)="onDelete(preset.name)">Delete</button>
+        </div>
+    </div>
+  }
+</div>
